@@ -27,13 +27,45 @@ If you see `provider-acorny-highlights.koplugin.zip`, do not copy the zip file i
 1. Open https://github.com/momadacoding/provider-acorny-highlights.koplugin
 2. Click `Code` > `Download ZIP`.
 3. Unzip the downloaded file.
-4. The unzipped folder may be named `provider-acorny-highlights.koplugin-master`. Rename it to:
+4. Find the folder that directly contains `main.lua` and `_meta.lua`.
+
+Depending on your unzip tool, you may see one of these layouts:
+
+```text
+provider-acorny-highlights.koplugin-master/
+  main.lua
+  _meta.lua
+```
+
+or:
+
+```text
+provider-acorny-highlights.koplugin-master/
+  provider-acorny-highlights.koplugin-master/
+    main.lua
+    _meta.lua
+```
+
+Use the inner folder that directly contains `main.lua` and `_meta.lua`. Rename that folder to:
 
 ```text
 provider-acorny-highlights.koplugin
 ```
 
-5. Copy that whole folder into KOReader's `plugins` directory.
+5. Copy the whole renamed `provider-acorny-highlights.koplugin` folder into KOReader's `plugins` directory.
+
+The final installed files must look like this:
+
+```text
+plugins/provider-acorny-highlights.koplugin/main.lua
+plugins/provider-acorny-highlights.koplugin/_meta.lua
+```
+
+Do not install it like this:
+
+```text
+plugins/provider-acorny-highlights.koplugin/provider-acorny-highlights.koplugin-master/main.lua
+```
 
 ### Option 2: Git clone
 
@@ -101,3 +133,4 @@ If Acorny does not appear in `Export highlights`:
 2. Check that `main.lua` is directly inside that folder, not inside another nested folder.
 3. Restart KOReader after copying the folder.
 4. Open KOReader's plugin management menu and make sure `Acorny highlight sync` is enabled.
+
